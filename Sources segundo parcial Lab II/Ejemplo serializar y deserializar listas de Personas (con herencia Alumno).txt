@@ -1,0 +1,44 @@
+using System.Xml.Serialization;
+
+// Instancio una lista de Personas, varios Alumnos (que heredan de Persona) y una Persona
+List<Persona> listita = new List<Persona>();
+Alumno eze = new Alumno("Ezequiel", "Mahafud", 1);
+Alumno santi = new Alumno("Santiago", "Moran", 2);
+Alumno josias = new Alumno("Josias", "Rivola", 3);
+Persona mica = new Persona("Micaela", "Saez");
+
+// Agrego los Alumnos y la Persona a la lista
+listita.Add(eze);
+listita.Add(santi);
+listita.Add(josias);
+listita.Add(mica);
+
+// Crea una instancia de la clase XmlSerializer para serializar una lista de personas
+XmlSerializer serializador = new XmlSerializer(typeof(List<Persona>));
+
+// Abre el archivo XML ubicado en el escritorio en modo escritura sobreescribiendo su contenido
+TextWriter escritor = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\personas.xml", false, Encoding.UTF8);
+
+// Escribe en el archivo serializándolo
+serializador.Serialize(escritor, listita);
+
+// Cierra el archivo
+escritor.Close();
+
+// Abre el archivo XML en modo lectura
+TextReader lector = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\personas.xml");
+
+// Deserializa el archivo guardando el contenido en una lista
+List<Persona> listaDeserializada = (List<Persona>)serializador.Deserialize(lector);
+
+// Cierra el archivo
+lector.Close();
+
+// NOTA IMPORTANTE: Para que esto funcione, arriba de la definición de la clase padre (Persona) se debe
+// agregar lo siguiente -> [XmlInclude(typeof(Alumno))]
+EJEMPLO:
+[XmlInclude(typeof(Alumno))]
+public class Persona
+{
+    // Bla, bla, bla..
+}

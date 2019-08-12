@@ -1,0 +1,8 @@
+﻿14/11/2017 11:11:56 a.m.: Precio: $5 -- Marca: BIC -- Color: Blue -- Trazo: Ancho
+14/11/2017 11:11:56 a.m.: Precio: $50 -- Marca: Parker -- Color: Black -- Trazo: Fino
+14/11/2017 11:11:56 a.m.: Precio: $15 -- Marca: Mapped -- Borra lapiz: Si
+14/11/2017 11:11:56 a.m.: Precio: $2 -- Marca: Pindorcho -- Borra lapiz: Si
+14/11/2017 11:24:49 a.m.: Precio: $5 -- Marca: BIC -- Color: Blue -- Trazo: Ancho
+14/11/2017 11:24:49 a.m.: Precio: $50 -- Marca: Parker -- Color: Black -- Trazo: Fino
+14/11/2017 11:24:49 a.m.: Precio: $15 -- Marca: Mapped -- Borra lapiz: Si
+14/11/2017 11:24:49 a.m.: Precio: $2 -- Marca: Pindorcho -- Borra lapiz: Si

@@ -1,0 +1,23 @@
+// Verifica si existe un archivo
+File.Exists("ruta archivo");
+
+// Copia un archivo, no permite sobreescribir uno existente
+File.Copy("ruta1", "ruta2");
+
+// Elimina un archivo
+File.Delete("ruta archivo");
+
+// Elimina un directorio, el true indica que borre también todo su contenido
+Directory.Delete("ruta", true);
+
+// Determina si existe o no el directorio
+Directory.Exists("ruta");
+
+// Devuelve los nombres de los archivos con sus rutas de acceso del directorio especificado
+GetFiles("ruta");
+
+// Rutas de acceso de directorios conocidos
+Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+

@@ -1,0 +1,35 @@
+// Instancio el nuevo formulario y lo llamo
+frmLocal formulario = new frmLocal();
+formulario.ShowDialog();
+
+---------------------------------
+EN EL OTRO FORMULARIO
+---------------------------------
+
+protected override void btnAceptar_Click(object sender, EventArgs e) {
+    float costo = 0;
+    float duracion = 0;
+
+    // Tomo los valores de los campos
+    if (float.TryParse(base.txtDuracion.ToString(), out duracion) && float.TryParse(this.txtCosto.ToString(), out costo)) {
+        base.DialogResult = DialogResult.Cancel;
+        return;
+    }
+
+    // Instancio un nuevo objeto en base a esos valores
+    this._local = new Local(base.txtNuOrigen.ToString(), duracion, base.txtNuDestino.ToString(), costo);
+
+    // Retorno que apretó OK
+    this.DialogResult = DialogResult.OK;
+}
+
+---------------------------------
+DE REGRESO AL PRIMER FORMULARIO
+---------------------------------
+
+// Si apreta OK en el otro formulario, mediante una propiedad tomo lo que cargó
+// y lo muestro en un ListVisor
+if (formulario.DialogResult == DialogResult.OK) {
+    this._centralita += formulario.Llamadas;
+    this.lstVisor.Items.Add(formulario.Llamadas.ToString());
+}

@@ -1,0 +1,88 @@
+public class Deposito<T> where T : new()
+{
+    private int _capacidadMaxima;
+    private List<T> _lista;
+
+    public Deposito() {
+        this._lista = new List<T>();
+    }
+
+    public Deposito(int capacidad) : this() {
+        if (capacidad > 50) {
+            this._capacidadMaxima = 50;
+            //throw new Exception("La capacidad del depósito no puede ser mayor a 50");
+        }
+        else if (capacidad < 1) {
+            this._capacidadMaxima = 1;
+            //throw new Exception("La capacidad del depósito no puede ser menor a 1");
+        }
+        else {
+            this._capacidadMaxima = capacidad;
+        }
+    }
+
+    public List<T> Lista {
+        get { return this._lista; }
+    }
+
+    public int Capacidad {
+        get { return this._capacidadMaxima - this._lista.Count; }
+    }
+
+    private int GetIndice(T objeto) {
+        for (int i = 0; i < this._lista.Count; i++) {
+            if (objeto.Equals(this._lista[i]))
+                return i;
+        }
+
+        return -1;
+    }
+
+    public bool Agregar(T objeto) {
+        return this + objeto;
+    }
+
+    public bool Remover(T objeto) {
+        return this - objeto;
+    }
+
+    public static bool operator +(Deposito<T> deposito, T objeto) {
+        if (deposito._capacidadMaxima > deposito._lista.Count)
+        {
+            deposito._lista.Add(objeto);
+
+            return true;
+        }
+        else {
+            throw new DepositoLlenoException();
+        }
+
+        return false;
+    }
+
+    public static bool operator -(Deposito<T> deposito, T objeto) {
+        int indice = 0;
+        indice = deposito.GetIndice(objeto);
+
+        if (indice >= 0) {
+            deposito._lista.RemoveAt(indice);
+
+            return true;
+        }
+
+        return false;
+    }
+
+    public override string ToString() {
+        StringBuilder retorno = new StringBuilder();
+
+        retorno.AppendFormat("Capacidad máxima: {0}\n", this._capacidadMaxima);
+        retorno.AppendFormat("Listado de {0}s:\n", typeof(T).Name.ToString());
+
+        for (int i = 0; i < this._lista.Count; i++) {
+            retorno.AppendLine(this._lista[i].ToString());
+        }
+
+        return retorno.ToString();
+    }
+}

@@ -1,0 +1,6 @@
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\obj\Debug\Mahafud.Ezequiel.csprojResolveAssemblyReference.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\obj\Debug\Mahafud.Ezequiel.csproj.CoreCompileInputs.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\bin\Debug\Articulo.dll
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\bin\Debug\Articulo.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\obj\Debug\Articulo.dll
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 3 PP Lab II\Mahafud.Ezequiel\Articulo\obj\Debug\Articulo.pdb

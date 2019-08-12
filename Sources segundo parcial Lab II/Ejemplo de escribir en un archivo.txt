@@ -1,0 +1,24 @@
+using System.IO;
+
+// Instancia una persona
+Persona personita = new Persona("Ezequiel", "Mahafud");
+
+// Abre un archivo en modo escritura en el mismo directorio donde se encuentra la aplicación
+StreamWriter archivo = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\personas.txt", true, Encoding.UTF8);
+// Se puede usar "Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)" + "\\personas.txt" para la carpeta "Mis Documentos"
+
+// Escribe el archivo
+archivo.WriteLine(personita.ToString());
+
+// Los cierra
+archivo.Close();
+
+// Lee el archivo
+// NOTA: Al estar dentro de un bloque using, no es necesario cerrar el archivo con arhivito.Close();
+using (StreamReader archivito = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + @"\personas.txt")) {
+    while (!archivito.EndOfStream) {
+        Console.WriteLine(archivito.ReadLine());
+    }
+
+    Console.Read();
+}

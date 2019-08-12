@@ -1,0 +1,31 @@
+--------------------------------
+CONEXIÓN A LA DB
+--------------------------------
+
+SqlConnection conexion = new SqlConnection(Properties.Settings.Default.Conexion);
+SqlCommand comando = new SqlCommand();
+
+---------------------------------
+CONSULTA SELECT
+---------------------------------
+
+// Configuro la conexión
+comando.Connection = this._conexion;
+comando.CommandType = CommandType.Text;
+comando.CommandText = "SELECT * FROM personas";
+
+// Abro la conexión
+conexion.Open();
+
+// Ejecuto la consulta
+SqlDataReader data = comando.ExecuteReader();
+
+// Creo un objeto tipo DataTable
+DataTable datatable = new DataTable("Personas");
+
+// Guardo la información en el DataTable
+datatable.Load(data);
+
+// Cierro la conexión
+data.Close();
+conexion.Close();

@@ -1,0 +1,33 @@
+using System.Xml.Serialization;
+using System.IO;
+
+// Instancia la persona
+Persona personita = new Persona("Ezequiel", "Mahafud");
+
+// Crea un serializador para objetos de tipo Persona
+XmlSerializer serializador = new XmlSerializer(typeof(Persona));
+
+// Crea un escritor en el Escritorio
+TextWriter escritor = new StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\personas.xml", false, Encoding.UTF8);
+
+// Serializa la persona
+serializador.Serialize(escritor, personita);
+
+// Cierra el serializador
+escritor.Close();
+
+------------------------------
+DESERIALIZAR
+------------------------------
+
+// Crea un serializador para objetos de tipo Persona
+XmlSerializer serializador = new XmlSerializer(typeof(Persona));
+
+// Crea un lector en el escritorio
+TextReader lector = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\personas.xml", Encoding.UTF8);
+
+// Lo deserializa y lo guarda en una variable
+Persona personitaDeserializada = (Persona)serializador.Deserialize(lector);
+
+// Cierra el deserealizador
+lector.Close();

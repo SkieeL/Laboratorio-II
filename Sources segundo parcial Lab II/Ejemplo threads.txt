@@ -1,0 +1,20 @@
+// Crea el hilo y le asigna un método manejador
+// El método manejador no puede retornar nada y no debe tener parámetros
+Thread hilo = new Thread(new ThreadStart(NombreMetodoManejador));
+
+// Inicia el hilo
+hilo.Start();
+
+------------------------
+THREADS PARAMETRIZADOS
+------------------------
+
+// Crea el hilo y le asigna un método manejador
+// El método manejador no puede retornar nada y recibe un object como parámetro
+Thread hilo = new Thread(new ParametrizedThreadStart(NombreMetodoManejador));
+
+// Inicia el hilo pasandole un objeto, en este caso un string
+hilo.Start("objeto");
+
+// Sirve para dormir el hilo, se usa directamente desde la clase "Thread" dentro de la función manejadora
+Thread.Sleep(100);

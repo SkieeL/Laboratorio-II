@@ -1,0 +1,28 @@
+--------------------------------
+DEFINICIÓN DE LA INTERFACE
+--------------------------------
+
+public interface IAFIP
+{
+    // No debe tener modificador de visibilidad
+    double CalcularImpuesto();
+}
+
+--------------------------------
+IMPLEMENTACIÓN DE LA INTERFACE
+--------------------------------
+
+public class Avion : Vehiculo, IAFIP
+{
+    protected double _velocidadMaxima;
+
+    // Forma EXPLÍCITA: No se usa override ni modificador de visibilidad (queda oculta para la clase)
+    double IAFIP.CalcularImpuesto() {
+        return base._precio * 0.33;
+    }
+
+    // Forma IMPLÍCITA: No se usa override
+    public double CalcularImpuesto() {
+        return base._precio * 0.33;
+    }
+}

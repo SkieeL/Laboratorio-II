@@ -1,0 +1,50 @@
+// Agrega un método de extensión a la clase "String" que NO recibe parámetros
+// "cadena" representaría dentro del desarrollo del método el objeto desde 
+// donde se llama el método extendido
+public static int cantidadCaracteres(this String cadena) {
+    return cadena.Length;
+}
+
+// Llamada
+string stringcito = "";
+stringcito.cantidadCaracteres();
+
+-------------------------
+OTRO EJEMPLO
+-------------------------
+
+public static string obtenerInfo(this Persona personita) { 
+    StringBuilder retorno = new StringBuilder();
+
+    retorno.AppendLine(personita.Nombre);
+    retorno.AppendLine(personita.Apellido);
+    retorno.AppendLine(personita.Edad.ToString());
+    retorno.AppendLine(personita.Sexo.ToString());
+
+    return retorno.ToString();
+}
+
+// Llamada
+Persona ezequiel = new Persona();
+ezequiel.obtenerInfo();
+
+------------------------
+OTRO EJEMPLO MÁS
+------------------------
+
+public static string obtenerInfo(this Persona personita, bool uppercase) {
+    StringBuilder retorno = new StringBuilder();
+
+    if (uppercase) {
+        retorno.AppendLine(personita.obtenerInfo().ToUpper());
+    }
+    else {
+        retorno.AppendLine(personita.obtenerInfo());
+    }
+
+    return retorno.ToString();
+}
+
+// Llamada
+Persona ezequiel = new Persona();
+ezequiel.obtenerInfo(true);

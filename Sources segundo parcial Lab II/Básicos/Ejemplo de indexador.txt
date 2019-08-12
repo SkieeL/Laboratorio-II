@@ -1,0 +1,22 @@
+public Capitulo this[int indice]
+{
+    get
+    {
+        if (indice >= this._capitulos.Count || indice < 0)
+            return null;
+        else
+            return this._capitulos[indice];
+    }
+    set
+    {
+        if (indice >= 0 && indice < this._capitulos.Count)
+            this._capitulos[indice] = value;
+        else if (indice == this._capitulos.Count)
+            this._capitulos.Add(value);
+        else
+        {
+            Console.WriteLine("No se puede asignar a este elemento");
+            Console.ReadLine();
+        }
+    }
+}

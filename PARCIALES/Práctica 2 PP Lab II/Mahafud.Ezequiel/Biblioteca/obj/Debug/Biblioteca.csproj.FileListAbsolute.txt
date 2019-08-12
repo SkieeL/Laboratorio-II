@@ -1,0 +1,10 @@
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Biblioteca\bin\Debug\Biblioteca.dll
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Biblioteca\bin\Debug\Biblioteca.pdb
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.dll
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Biblioteca\obj\Debug\Biblioteca.pdb

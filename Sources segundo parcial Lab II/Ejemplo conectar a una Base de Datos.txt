@@ -1,0 +1,101 @@
+using System.Data.SqlClient;
+using System.Data;
+
+--------------------------------
+CONEXIÓN A LA DB
+--------------------------------
+
+SqlConnection conexion = new SqlConnection(Properties.Settings.Default.Conexion);
+SqlCommand comando = new SqlCommand();
+
+--------------------------------
+CONSULTA SELECT
+--------------------------------
+
+// Instancio una lista de Persona
+List<Persona> listaPersonas = new List<Persona>();
+            
+// Configuro la conexión
+comando.Connection = conexion;
+comando.CommandType = CommandType.Text;
+comando.CommandText = "SELECT * FROM personas";
+
+// Abro la conexión
+conexion.Open();
+
+// Ejecuto la consulta
+SqlDataReader data = comando.ExecuteReader();
+
+// Leo la información instanciando nuevas personas y agregándolas a la lista de Persona
+while (data.Read()) {
+    listaPersonas.Add(new Persona((int)data["id"], (string)data["nombre"], (string)data["apellido"], (int)data["edad"]));
+}
+
+// Cierro la conexión
+data.Close();
+conexion.Close();
+
+-----------------------------------
+CONSULTA INSERT
+-----------------------------------
+
+// Creo un StringBuilder para armar la consulta
+StringBuilder consulta = new StringBuilder();
+int retorno;
+
+// Configuro la consulta
+consulta.AppendFormat("INSERT INTO personas (nombre, apellido, edad) VALUES ('{0}', '{1}', '{2}')", persona._nombre, persona._apellido, persona._edad);
+comando.Connection = this._conexion;
+comando.CommandType = CommandType.Text;
+comando.CommandText = consulta.ToString();
+
+// Abro la conexión
+conexion.Open();
+
+// Inseta la información, esto retorna la cantidad de datos insertados
+retorno = this._comando.ExecuteNonQuery();
+
+// Cierro la conexión
+conexion.Close();
+
+-----------------------------------
+CONSULTA DELETE
+-----------------------------------
+
+int retorno;
+
+// Configuro la conexión
+comando.Connection = conexion;
+comando.CommandType = CommandType.Text;
+comando.CommandText = "DELETE FROM personas WHERE id = " + persona._id;
+
+// Abro la conexión
+conexion.Open();
+
+// Ejecuto la consulta, esto retorna la cantidad de registros que fueron eliminados
+retorno = comando.ExecuteNonQuery();
+
+// Cierro la conexión
+this._conexion.Close();
+
+-----------------------------------
+CONSULTA UPDATE
+-----------------------------------
+// Creo un StringBuilder para armar la consulta
+StringBuilder consulta = new StringBuilder();
+int retorno;
+
+// Configuro la consulta
+consulta.AppendFormat("UPDATE personas SET nombre = '{0}', apellido = '{1}', edad = {2} WHERE id = {3}", persona._nombre, persona._apellido, persona._edad, persona._id);
+comando.Connection = this._conexion;
+comando.CommandType = CommandType.Text;
+comando.CommandText = consulta.ToString();
+
+// Abro la conexión
+conexion.Open();
+
+// Ejecuto la consulta, esto retorna la cantidad de registros que fueron actualizados
+retorno = comando.ExecuteNonQuery();
+
+// Cierro la conexión
+conexion.Close();

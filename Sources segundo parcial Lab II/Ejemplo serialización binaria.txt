@@ -1,0 +1,47 @@
+using System.Runtime.Serialization.Formatters.Binnary;
+using System.IO;
+
+// Clase a serializar
+[Serializable]
+public class ClaseA 
+{
+	// Code..
+}
+
+--------------------
+// SERIALIZANDO
+--------------------
+
+// Objeto a serializar
+Persona personita = new Persona();
+
+// Similar el StreamWriter
+FileStream filestream = new FileStream("ruta archivo", FileMode.Create);
+
+// Serializador binario
+BinaryFormatter serializador = new BinnaryFormatter();
+
+// Serializa la persona
+serializador.Serialize(filestream, personita);
+
+// Cierra el escritor
+filestream.Close();
+
+---------------------------
+// DESERIALIZANDO
+---------------------------
+
+// Contenedor que guardará el objeto deserializado
+Persona personita = new Persona();
+
+// Similar el StreamReader
+FileStream filestream = new FileStream("ruta archivo", FileMode.Open);
+
+// Serializador binario
+BinaryFormatter serializador = new BinnaryFormatter();
+
+// Serializa la persona
+personita = (Persona) serializador.Deserialize(filestream);
+
+// Cierra el escritor
+filestream.Close();

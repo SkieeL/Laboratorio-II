@@ -1,0 +1,16 @@
+------------------------
+IMPLEMENTACIÓN EN CLASE
+------------------------
+
+public class Persona 
+{
+    public string Name { get; set; }
+}
+
+------------------------
+USO EN EL MAIN
+------------------------
+
+Persona personita = new Persona();
+
+personita.Name = "Ezequiel";

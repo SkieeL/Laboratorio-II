@@ -1,0 +1,5 @@
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Excepciones\bin\Debug\Excepciones.dll
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Excepciones\bin\Debug\Excepciones.pdb
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Excepciones\obj\Debug\Excepciones.csprojResolveAssemblyReference.cache
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Excepciones\obj\Debug\Excepciones.dll
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Excepciones\obj\Debug\Excepciones.pdb

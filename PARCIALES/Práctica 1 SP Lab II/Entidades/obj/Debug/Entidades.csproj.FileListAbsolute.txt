@@ -1,0 +1,8 @@
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\bin\Debug\Entidades.dll
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\bin\Debug\Entidades.pdb
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\bin\Debug\Excepciones.dll
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\bin\Debug\Excepciones.pdb
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\obj\Debug\Entidades.dll
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\obj\Debug\Entidades.pdb
+D:\UTN 2do cuatrimestre\PARCIALES\practicaSegundoParcial\Entidades\bin\Debug\Entidades.dll.config

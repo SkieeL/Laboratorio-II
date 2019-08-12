@@ -1,0 +1,33 @@
+namespace Entidades 
+{
+    // En el namespace de la clase desde donde se llama el evento
+    public delegate void delegadito(object obj, EventArgs e);
+
+    public Cartuchera
+    {
+        // Dentro de la clase desde donde se llama el evento
+        public event delegadito NombreEvento;
+
+	// Donde se llama el disparador del evento
+        this.NombreEvento(this, new EventArgs());
+    }
+}
+
+---------------------------------
+EN DONDE SE EJECUTA (EN EL MAIN)
+---------------------------------
+
+// Instancia un objeto de tipo Cartuchera
+Cartuchera cartucherita = new Cartuchera();
+
+// Le agrega la función ejecutora al evento
+cartucherita.NombreEvento += new delegadito(NombreFuncionEjecutora);
+
+----------------------------------
+POR FUERA DEL MAIN
+----------------------------------
+
+// Función ejecutora asignada al evento
+public static void NombreFuncionEjecutora(object obj, EventArgs e) {
+    // Bla, bla, bla..
+}

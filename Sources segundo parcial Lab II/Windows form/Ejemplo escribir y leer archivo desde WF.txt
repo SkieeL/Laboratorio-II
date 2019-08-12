@@ -1,0 +1,48 @@
+// Dato a guardar
+public Persona _personita; 
+
+--------------------------------
+ESCRITURA DEL ARCHIVO
+--------------------------------
+
+// Crea una instancia del buscador para guardar un archivo
+SaveFileDialog guardarArchivo = new SaveFileDialog();
+
+// Establece el escritorio como la carpeta por defecto de la búsqueda
+guardarArchivo.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+// Si dio OK..
+if (guardarArchivo.ShowDialog() == DialogResult.OK) {
+    // Abre el archivo en modo escritura, el guardarArchivo.FileName retorna la ruta del archivo 
+    StreamWriter escribirArchivo = new StreamWriter(guardarArchivo.FileName, true, Encoding.UTF8);
+
+    // Escribe en el archivo
+    escribirArchivo.WriteLine(this._personita.ToString());
+
+    // Lo cierra
+    escribirArchivo.Close();
+}
+
+--------------------------------
+LECTURA DEL ARCHIVO
+--------------------------------
+
+// Crea una instancia del buscador para abrir un archivo
+OpenFileDialog abrirArchivo = new OpenFileDialog();
+
+// Establece el escritorio como la carpeta por defecto de la búsqueda
+abrirArchivo.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+// Si dio OK..
+if (abrirArchivo.ShowDialog() == DialogResult.OK) {
+    // Abre el archivo en modo lectura, el abrirArchivo.FileName retorna la ruta del archivo 
+    StreamReader leerArchivo = new StreamReader(abrirArchivo.FileName);
+
+    // Lee el archivo línea por línea
+    while (!leerArchivo.EndOfStream) {
+        ltsBoxInformacion.Items.Add(leerArchivo.ReadLine());
+    }
+
+    // Lo cierra
+    leerArchivo.Close();
+}

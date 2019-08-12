@@ -1,0 +1,17 @@
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\bin\Debug\Test.exe.config
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\bin\Debug\Test.exe
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\bin\Debug\Test.pdb
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\bin\Debug\Biblioteca.dll
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\bin\Debug\Biblioteca.pdb
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\obj\Debug\Test.exe
+D:\UTN 2do cuatrimestre\Mahafud.Ezequiel\Mahafud.Ezequiel\Test\obj\Debug\Test.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\bin\Debug\Test.exe.config
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\bin\Debug\Test.exe
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\bin\Debug\Test.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\bin\Debug\Biblioteca.dll
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\bin\Debug\Biblioteca.pdb
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\obj\Debug\Test.exe
+C:\Users\c\Desktop\UTN 2do cuatrimestre\Práctica 2 PP Lab II\Mahafud.Ezequiel\Test\obj\Debug\Test.pdb
